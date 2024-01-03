@@ -1,0 +1,298 @@
+
+.sign {
+    padding-top: 40px;
+    color: #8C55AA;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: -15px;
+}
+
+.un {
+width: 80%;
+height: 15%;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-left: 46px;
+text-align: center;
+margin-bottom: 27px;
+
+font-family: 'Ubuntu', sans-serif;
+}
+
+form.form1 {
+    padding-top: 40px;
+}
+
+.pass {
+width: 80%;
+height: 15%;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-left: 46px;
+text-align: center;
+margin-bottom: 20px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+.id {
+    width: 80%;
+    height: 15%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 27px; /* Remove the duplicate margin-bottom property */
+    margin-left: 46px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+.un:focus, .pass:focus , .id:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+    
+}
+
+.submit {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #9C27B0, #E040FB);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 34%;
+    margin-bottom: 20px;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.preference {
+    background-color: #9C27B0;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+  
+
+
+
+.forgot {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #E1BEE7;
+    padding-top: 15px;
+}
+
+a {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #E1BEE7;
+    text-decoration: none
+}
+
+@media (max-width: 600px) {
+    .main {
+        border-radius: 0px;
+    }
+}
+
+/*취향검사버튼 꾸미기*/
+.select-btn {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #9C27B0, #E040FB);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 34%;
+    margin-bottom: 20px;
+   
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+
+.tema-btn {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #9C27B0, #E040FB);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 34%;
+    margin-bottom: 20px;
+   
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+/*버튼을 그룹지어서 따로 저장*/
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+/*버튼 형태를 그대로 적용*/
+.button-style {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #9C27B0, #E040FB);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 13%;  /* 이 값을 조절하여 왼쪽 마진을 줄입니다 */
+    margin-right: 50px; /* 이 값을 추가하여 버튼과 버튼 사이의 간격을 조절합니다 */
+    margin-bottom: 40px;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+}
+
+/*각 스텝별 박스 크기*/
+
+.step{
+    background-color: #FFFFFF;
+    width: 450px;
+    height: 500px;
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+#step2 {
+    background-color: #FFFFFF;
+    width: 1000px;
+    height: 800px;
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    
+    position: relative;
+}
+
+#step3 {
+    background-color: #FFFFFF;
+    width: 900px;
+    height: 800px;
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+/*각각 스텝별 버튼 위치*/
+
+.step2 .button-container {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    display: flex;
+
+}
+
+/*사용자취향 이미지 정리*/
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.image-grid img {
+    width: 300px;
+    height: 180px;
+    margin-left: 15px;
+}
+
+.step2 .button-style {
+    margin-top : 20px;
+    margin-right: 40px;
+    margin-left: 25%;
+  
+  }
+
+/*사용자 취향 이미지 정리 step3*/
+.image-container3{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 30px;
+    grid-row-gap: 400px;
+}
+
+.image-grid3 img {
+    width: 400px;
+    height: 250px;
+    margin-left: 35px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+}
+.step3 .button-style {
+    margin-top : 20px;
+    margin-right: 40px;
+    margin-left: 25%;
+  
+  }
+
+/*사진 선택씨 파란색으로 감쌈*/
+#image-container img {
+    /* 기타 스타일 */
+    box-sizing: border-box;
+}
+#image-container img.selected {
+    outline: 5px solid red;
+}
+
+/*step3 선택택*/
+img.selected {
+    outline: 5px solid red;
+}
+

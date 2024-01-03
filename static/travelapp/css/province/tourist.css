@@ -1,0 +1,76 @@
+.main_introduction h3{
+    margin-bottom: 40px;
+}
+
+.back_ground_color {
+    background-color: #f2f2f2;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 -111px; /
+  }
+  
+  .back_ground_color .card-text {
+    background-color: transparent; /* 배경 색상을 투명하게 설정합니다 */
+  }
+  
+  .tourist_seoul_container {
+    display: flex;
+    background-color: transparent;
+  }
+  
+  .tourist_seoul {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* 그림자 스타일을 설정합니다 */
+    padding-right: 20px; /* 적절한 오른쪽 여백을 추가합니다 */
+    margin-right: 50px;
+    background-color: #ffffff;
+    height: 250px;
+    
+  }
+  
+  .tourist_seoul:last-child {
+    margin-right: 0; /* 마지막 카드리스트의 오른쪽 간격을 제거합니다 */
+  }
+
+  .card-img-top{
+        width: 208px;
+        height: 150px;
+        object-fit: cover;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card-text{
+    font: 20px/1.4 NotoSansKR,NotoSansJP,"돋움",Dotum,AppleGothic,Sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 100%;
+  }
+
+.main_tourist{
+    font: 20px/1.4 NotoSansKR,NotoSansJP,"돋움",Dotum,AppleGothic,Sans-serif;
+
+}
+.tourist_seoul {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    padding-right: 20px;
+    margin-right: 50px;
+    background-color: #ffffff;
+    height: 250px;
+  }
+
+span {
+    font: 15px NotoSansKR,NotoSansJP,"돋움",Dotum,AppleGothic,Sans-serif;
+    color: #666;
+    -webkit-text-size-adjust: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    line-height: 0; 
+    opacity: 0.5;  
+
+
+}

@@ -1,0 +1,316 @@
+/* 드롭다운 내리기 */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffff00;
+}
+
+
+/*메뉴판 가운대정렬*/
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*nav*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 10px;
+  margin-bottom: 70px; /* 아래쪽 마진 설정 */
+  box-shadow: 0 4px 2px -2px gray;
+}
+
+.nav-section {
+  display: inline-block;
+  flex-grow: 1;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-section a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  
+}
+
+.nav-section a:hover {
+  color: #000;
+}
+
+.nav-section:hover {
+  border-bottom: 2px solid #007bff;
+}
+
+.nav-section.active {
+  border-bottom: 2px solid #007bff;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+
+  top: 50px; /* Adjust this */
+  left: -325px; /* Adjust this */
+  
+}
+
+
+.dropdown-container {
+  display: flex;
+  justify-content: space-around; /* 박스들 사이에 공간을 동일하게 분배 */
+  white-space: nowrap;
+
+}
+
+.box {
+  width: 500px; /* 박스의 너비를 제한 */
+  max-width: 500px;
+  
+}
+
+#left-box{
+
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#right-box{
+    flex-grow: 1;
+    flex-shrink: 0; /* Add this */
+    border-left:1px solid black;
+    padding-left: 20px; /* or any value you prefer */
+}
+
+#cities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+
+
+
+
+
+  /*타이틀 꾸미기*/
+.title {
+    font-family: "Malgun Gothic",sans-serif;  /* 폰트 지정 */
+    font-weight: bold;  /* 글자 굵게 */
+    text-align: center;  /* 가운데 정렬 */
+    
+}
+/*h3 간단코멘트창*/
+.ex-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+h3.ex {
+    font: 28px/1.4 NotoSansKR,NotoSansJP,"돋움",Dotum,AppleGothic,Sans-serif;
+    -webkit-text-size-adjust: none;
+    text-align: center;
+    font-family: NotoSansKR,NotoSansJP,"돋움",Dotum,AppleGothic,Tahoma,Sans-serif;
+    word-break: keep-all;
+    color: #333;
+    letter-spacing: -1px;
+    margin: 0;
+    font-style: normal;
+    padding: 0 15px;
+    font-weight: 700;
+    box-shadow: inset 0 -12px 0 rgba(255,223,223,1);
+    display: inline-block;
+    position: relative;
+}
+
+h3.ex::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    position: absolute;
+    bottom: -5px;
+}
+
+.location {
+    
+    color: #666;
+    -webkit-text-size-adjust: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    padding: 4px 0 10px;
+
+  }
+  
+
+/*네비게이션 스크롤 css*/
+
+.nav_menu_scorll ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .nav_menu_scorll ul li {
+    margin-bottom: 20px;
+  }
+  
+  .nav_menu_scorll ul li::before {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: black; /* 원하는 표시 색상으로 변경하세요 */
+    margin-right: 10px;
+
+  }
+  
+  .nav_menu_scorll ul li a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .nav_menu_scorll ul li a.active {
+    font-weight: bold;
+  }
+
+  
+
+  /*네비게이션 버튼 디자인*/
+.nav_menu_scorll ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* 가운데 정렬 추가 */
+  }
+  
+  .nav_menu_scorll ul li {
+    display: block; /* 블록 요소로 변경 */
+    margin-bottom: 20px;
+  }
+  
+  .nav-button {
+    display: flex; /* Flexbox로 변경 */
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    width: 100%;
+    padding: 10px;
+    font-family: arial;
+    font-size: 16px;
+    color: #34495e;
+    text-decoration: none;
+    border: 2px solid #34495e;
+    border-radius: 4px;
+    transition: all .5s ease;
+    box-sizing: border-box; /* padding을 포함한 크기 계산 */
+  }
+  
+  .nav-button:hover {
+    background-color: #34495e;
+    color: #fff;
+  }
+
+
+/*캐러셀 사진 조절*/
+
+.carousel-container {
+    position: relative;
+
+  }
+
+.carousel-item img {
+    object-fit: scale-down;
+    max-height: 500px;
+    max-width: 100%;
+    margin-top: 15px;
+  }
+  
+  
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    filter: invert(100%);
+    min-height: 100px
+    
+  }
+
+  .carousel-control-prev{
+    margin-left:150px;/* 버튼들 사이의 간격 조절 */
+  }
+
+  .carousel-control-next{
+    margin-right: 150px;
+  }
+
+  .carousel-indicators{
+    filter:invert(100%);
+    bottom: -70px;
+  }
+ 
+
+  /*상세정보 칸꾸미기*/
+  #detail{
+    
+    margin-top: 80px;
+    text-align: center;
+    
+  }
+
+  .detail_box {
+    border-top: 5px solid black;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    width: 50%;
+    margin: 10px auto;
+    padding: 5px;
+    font: 15px 맑은고딕;
+    text-align: left;
+  }
+  
+
+  /*지도 가운대에 위치 + 주소받기 안보이게하기*/
+
+  #map {
+      width: 500px;
+      height: 400px;
+      margin: auto;
+  }
+
+  #address, #placeName {
+    display: none;
+}
+  

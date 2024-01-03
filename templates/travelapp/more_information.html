@@ -1,0 +1,166 @@
+{% load static %}
+<!doctype html>
+<html lang="ko">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'travelapp/css/MI/more_information.css' %}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'travelapp/js/MI/nav_bar.js' %}"></script>
+    <script src="{% static 'travelapp/js/MI/more_information.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <header class="blog-header lh-1 py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <a href="/travel/">
+              <img src="{% static 'travelapp/img/logo.png' %}" alt="로고" width="100" height="100">
+            </a>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+
+            <a class="btn btn-sm btn-outline-secondary" href="/travel/login/">로그인</a>
+            <span style="margin: 0 10px;"></span>
+            <a class="btn btn-sm btn-outline-secondary" href="/travel/signup/">회원가입</a>
+          </div>
+        </div>
+      </header>
+      <div id="nav" class="navbar">
+        <div class="nav-section">
+          <a class="p-2 link-secondary" href="/travel/">홈</a>
+        </div>
+        <div class="nav-section">
+          <div class="dropdown">
+            <a class="p-2 link-secondary" href="#">전국여행</a>
+            <div class="dropdown-content">
+              <div class="container dropdown-container">
+                <div id="left-box" class="box">
+                  <div id="provinces" class="content grid-container">
+                    <div class="grid-item"><a href="#" data-province="서울">서울</a></div>
+                    <div class="grid-item"><a href="#" data-province="부산">부산</a></div>
+                    <div class="grid-item"><a href="#" data-province="대구">대구</a></div>
+                    <div class="grid-item"><a href="#" data-province="인천">인천</a></div>
+                    <div class="grid-item"><a href="#" data-province="광주">광주</a></div>
+                    <div class="grid-item"><a href="#" data-province="대전">대전</a></div>
+                    <div class="grid-item"><a href="#" data-province="울산">울산</a></div>
+                    <div class="grid-item"><a href="#" data-province="세종">세종</a></div>
+                    <div class="grid-item"><a href="#" data-province="경기도">경기도</a></div>
+                    <div class="grid-item"><a href="#" data-province="강원도">강원도</a></div>
+                    <div class="grid-item"><a href="#" data-province="충청북도">충청북도</a></div>
+                    <div class="grid-item"><a href="#" data-province="충청남도">충청남도</a></div>
+                    <div class="grid-item"><a href="#" data-province="전라북도">전라북도</a></div>
+                    <div class="grid-item"><a href="#" data-province="전라남도">전라남도</a></div>
+                    <div class="grid-item"><a href="#" data-province="경상북도">경상북도</a></div>
+                    <div class="grid-item"><a href="#" data-province="경상남도">경상남도</a></div>
+                    <div class="grid-item"><a href="#" data-province="제주도">제주도</a></div>
+
+                    <!-- more provinces... -->
+                  </div>
+                </div>
+            
+                <div id="right-box" class="box">
+                  <div id="cities" class="content grid-container">
+                    <!-- cities will be loaded here... -->
+                  </div>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+        </div>
+
+        <div class="nav-section">
+          <a class="p-2 link-secondary" href="#">여행지도</a>
+        </div>
+      </div>
+
+
+      <!-- 나머지 코드... -->
+
+    </div>
+
+    <h2 class="title">함평 꽃축제</h2>
+      <div class="location">
+        <span>함평/팜평군</span>
+      </div>
+    <div class="ex-container">
+      <h3 class="ex">누구나 함께 놀 수 있는 바로 그곳!</h3>
+    </div>
+
+    <nav id="navbar" class="nav_menu_scorll" style="position: fixed; right: 20px; z-index: 3;">
+      <ul>
+        <li><a href="#photo" class="nav-button">사진</a></li>
+        <li><a href="#detail" class="nav-button">상세정보</a></li>
+        <li><a href="#recommend" class="nav-button">추천 여행지</a></li>
+      </ul>
+    </nav>
+  
+    
+    
+    <section id="photo">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'travelapp/img/hampyeong/2.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'travelapp/img/hampyeong/1.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'travelapp/img/hampyeong/3.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+      </div>
+    </section>
+
+    <section id="detail">
+      <h3>상세정보</h3>
+      <div class="detail_box">
+        <p>나비와 함께하는 봄날의 여행</p>
+        <p>싱그러운 봄바람과 꽃향기와 함께 나비들이 춤을 추는 4월, 전라남도 함평에서 아름다운 나비와 꽃, 곤충을 주제로 한 함평나비대축제가 열린다.</p>
+        <p>알에서부터 애벌레를 거쳐 나비가 되기까지의 성장과정을 알아보거나 세계 각국의 나비와 곤충 표본 450종 9,000여 마리를 구경하고,</p>
+        <p>생태환경에 대한 다양한 체험이 가능해 아이들과 함께 찾기 좋은 축제이다.</p>
+      </div>
+      <div class="detail_box">
+      </div>
+       <!--카카오 맵 불러오기-->
+      <div id="map" style="width:750px;height:400px;"></div>
+      <!--이쪽 부분만 수정하면 됨-->
+      <p id ="address">전라남도 함평군 함평읍 곤재로 27</p>
+      <p id="placeName">함평 나비축제</p>
+      <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=69e662d3080ee88ac4218a558b9fc845&libraries=services"></script>
+      <script src="/static/travelapp/js/MI/kakao_map.js"></script>
+      <li>추가정보 입력</li>
+      <li>추가정보 입력</li>
+      <li>추가정보 입력</li>
+      <li>추가정보 입력</li>
+    </section>
+    
+
+    <section id="recommend"></section>
+    
+
+
+
+  </body>
+</html>

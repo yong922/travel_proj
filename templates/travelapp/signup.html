@@ -1,0 +1,93 @@
+{% load static %}
+<head>
+    
+    <link rel="stylesheet" href="{% static 'travelapp/css/login/signup.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sign in</title>
+    <style>
+        body {
+            background-image: url("{% static 'travelapp/img/zxc.gif' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Ubuntu', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+    </style>
+
+
+    <script>
+        var csrfToken = '{{ csrf_token }}';
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'travelapp/js/signup/teste.js' %}"></script>
+     <script src="{% static 'travelapp/js/signup/tema.js' %}"></script>
+    <script src="{% static 'travelapp/js/signup/signup.js' %}"></script>
+    
+</head>
+<body>
+    <div class="main">
+        <div class="main_screen">
+            <div id="step1" class="step">
+                <p class="sign" align="center">회원가입</p>
+                <!-- 회원정보 입력 단계의 내용 -->
+                <form class="form1" method="post" action="{% url 'signup' %}">
+                    {% csrf_token %}
+                    <input class="un centered" type="text" placeholder="Username" name="mem_nm" required>
+                    <input class="id centered" type="id" placeholder="ID" name="mem_id" required>
+                    <input class="pass centered" type="password" placeholder="Password" name="mem_pw" required>
+                </form>
+                <button type="button" class="button-style" onclick="window.location.href = 'http://127.0.0.1:8000/travel/';">메인</button>
+                <button type="button" class="button-style" onclick="nextStep(2)">다음</button>
+            </div>
+        <div>
+
+        <div class="main_screen">
+            <div id="step2" class="step step2" style="display: none;" >
+                <!-- 사용자 취향검사 단계의 내용 -->
+                <p class="sign" align="center">마음에 드는 사진을 3가지 선택해주세요 ♫꒰･‿･๑꒱</p>
+                <form class="form1" method="post">
+                    {% csrf_token %}
+                    <div id="image-container" class="image-grid">
+                        <!-- 이미지 그리드 -->
+                    </div>
+                    <div class="selected-images">
+                        <!-- 선택된 이미지 표시 -->
+                    </div>
+                    <input type="hidden" id="teste" name="teste" value="">  <!-- hidden input field를 추가합니다 -->
+                    {% comment %} <div class="teste">
+                        {% comment %} <input class="un centered" type="text" placeholder="User Preference" name="teste">
+                        <!-- 사용자 취향검사 내용을 추가하세요 -->
+                    </div>  {% endcomment %}
+                </form>
+                <button type="button" class="button-style" onclick="previousStep(event, 2)">이전</button>
+                <button type="button" class="button-style" onclick="nextStep(3)">다음</button>
+            </div>
+        </div>
+
+        <div class="main_screen">
+            <div id="step3" class="step step3" style="display: none;">
+                <p class="sign" align="center">마음에 드는 이미지를 1개 선택해주세요 ♫꒰･‿･๑꒱</p>
+                <form class="form1" method="post"action="/travel/signup/">
+                    {% csrf_token %}
+                    <div id="image-container3" class="image-grid3">
+                        <!-- 이미지가 동적으로 삽입됩니다. -->
+                    </div>
+                    <div class="selected-images">
+                        <!-- 선택된 이미지 표시 -->
+                    </div>
+                    <input type="hidden" id="tema" name="tema" value="">
+                </form>
+                <button type="button" class="button-style" onclick="previousStep(event,3)">이전</button>
+                <button class="button-style" onclick="nextStep(4)">완료</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

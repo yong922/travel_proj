@@ -1,0 +1,487 @@
+{% load static %}
+<!doctype html>
+<html lang="ko">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'travelapp/css/main/main.css' %}" rel="stylesheet">
+    <link href="{% static 'travelapp/css/main/main_button.css' %}" rel="stylesheet">
+    <script src="{% static 'travelapp/js/main.js' %}"></script>
+    <script src="{% static 'travelapp/js/main_nav_bar.js' %}"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <header class="blog-header lh-1 py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <a href="">
+              <img src="{% static 'travelapp/img/logo.png' %}" alt="로고" width="100" height="100">
+            </a>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+
+            <a class="btn btn-sm btn-outline-secondary" href="/travel/login/">로그인</a>
+            <span style="margin: 0 10px;"></span>
+            <a class="btn btn-sm btn-outline-secondary" href="/travel/signup/">회원가입</a>
+          </div>
+        </div>
+      </header>
+      <div id="nav" class="navbar">
+        <div class="nav-section">
+          <a class="p-2 link-secondary" href="">홈</a>
+        </div>
+         <div class="nav-section">
+          <div class="dropdown">
+            <a class="p-2 link-secondary" href="#">전국여행</a>
+            <div class="dropdown-content">
+              <div class="container dropdown-container">
+                <div id="left-box" class="box">
+                  <div id="provinces" class="content grid-container">
+                    <div class="grid-item"><a href="/travel/seoul" data-province="서울">서울</a></div>
+                    <div class="grid-item"><a href="/travel/busan" data-province="부산">부산</a></div>
+                    <div class="grid-item"><a href="/travel/daegu" data-province="대구">대구</a></div>
+                    <div class="grid-item"><a href="/travel/incheon" data-province="인천">인천</a></div>
+                    <div class="grid-item"><a href="/travel/gwangju" data-province="광주">광주</a></div>
+                    <div class="grid-item"><a href="/travel/daejeon" data-province="대전">대전</a></div>
+                    <div class="grid-item"><a href="/travel/ulsan" data-province="울산">울산</a></div>
+                    <div class="grid-item"><a href="/travel/sejong" data-province="세종">세종</a></div>
+                    <div class="grid-item"><a href="#" data-province="경기도">경기도</a></div>
+                    <div class="grid-item"><a href="#" data-province="강원도">강원도</a></div>
+                    <div class="grid-item"><a href="#" data-province="충청북도">충청북도</a></div>
+                    <div class="grid-item"><a href="#" data-province="충청남도">충청남도</a></div>
+                    <div class="grid-item"><a href="#" data-province="전라북도">전라북도</a></div>
+                    <div class="grid-item"><a href="#" data-province="전라남도">전라남도</a></div>
+                    <div class="grid-item"><a href="#" data-province="경상북도">경상북도</a></div>
+                    <div class="grid-item"><a href="#" data-province="경상남도">경상남도</a></div>
+                    <div class="grid-item"><a href="/travel/jeju" data-province="제주도">제주도</a></div>
+
+                    <!-- more provinces... -->
+                  </div>
+                </div>
+            
+                <div id="right-box" class="box">
+                  <div id="cities" class="content grid-container">
+                    <!-- cities will be loaded here... -->
+                  </div>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+        </div>
+        <div class="nav-section">
+          <a class="p-2 link-secondary" href="/travel/maker/">여행지도</a>
+        </div>
+      </div>
+
+      <!-- 나머지 코드... -->
+
+    </div>
+
+    <div class="container extra-margin" style="position: relative; z-index: 1;">
+      <div class="p-4 p-md-5 mb-4 rounded text-bg-dark d-flex align-items-center justify-content-center" style="position: relative; background-image: url('{% static 'travelapp/img/159159.png' %}');  background-repeat: no-repeat; background-position: center; padding: 10px; width: 100%; height: 400px;">
+        <div class="col-md-6 px-0 text-center" style="position: relative; z-index: 1;">
+          <h1 class="display-4 fst-italic text-white">야! 여행가자</h1>
+          <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+        </div>
+      </div>
+    
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+              <!-- 왼쪽영역 -->  
+              <div class="carousel" style="width: 400px; height:920px">
+                <div class="slide" id="slide1">
+                  <h1>10대</h1>
+                  <div class="slide-content">
+              
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/ansghk.jpg' %}"> </a>
+                          <div class="text-container">
+                            <p class="destination_name">해인사 성보박물관</p>
+                            <p class="destination_address">경상남도 합천군</p>
+                            <p class="destination_coment">이곳에 팔만대장경판이!? 바로 보고싶다면</p>
+                            <button class="destination_button">보러 가기</button>
+                          </div>
+                    </div>
+                  
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/ansghk.jpg' %}"> </a>
+                          <div class="text-container">
+                            <p class="destination_name">해인사 성보박물관</p>
+                            <p class="destination_address">경상남도 합천군</p>
+                            <p class="destination_coment">이곳에 팔만대장경판이!? 바로 보고싶다면</p>
+                            <button class="destination_button">보러 가기</button>
+                          </div>
+                    </div>
+
+                    <div class="image-text">
+                      <img src="https://previews.dropbox.com/p/thumb/AB_k6P5NdnQGbgEfxSMRGZkhdWCyi6nsq-yesprkUJxq8GNMBsOq8wgukuxjvRGDorGdnKiRNfTs11JkVzrGTvoYgdR-c5eQREX3AM_9IsIAe3P22XO4dJ7WAp4174DH2gfSFGlYJU_teThwliQzXQuxre9mXD8EEvZqdmfzF7ua9Mpd1QCCCOwWIb5eS6BeWASYXXA5GIRIaieyA_BsbRb7JohPNqpx4wkNLGNc_qNouoARf1a6MFNODvWT3GLXxzLZBD7QsYc9GHBwla4t1ldZa_NOD-ty6exjLMmbzOw5DxfEoMVosb7ROaXA4kxdVVQjWRnmd_A5X3guHVIQmzRpq9JAm0S2IqozKRQOb91t06zk7Jyv_5PEgOr6Iz9e-yI/p.jpeg"> </a>
+                          <div class="text-container">
+                            <p class="destination_name">해인사 성보박물관</p>
+                            <p class="destination_address">경상남도 합천군</p>
+                            <p class="destination_coment">이곳에 팔만대장경판이!? 바로 보고싶다면</p>
+                            <button class="destination_button">보러 가기</button>
+                          </div>
+                    </div>
+
+                    <div class="image-text">
+                      <img src="https://drive.google.com/uc?export=download&id=18tpxzK14AVwrzwJxqklka2XfdQBtk-t0"> </a>
+                          <div class="text-container">
+                            <p class="destination_name">해인사 성보박물관</p>
+                            <p class="destination_address">경상남도 합천군</p>
+                            <p class="destination_coment">이곳에 팔만대장경판이!? 바로 보고싶다면</p>
+                            <button class="destination_button">보러 가기</button>
+                          </div>
+                    </div>
+
+                    <div class="image-text">
+                      <img src="https://i.ibb.co/LnyLpZr/AHC-1-3.png"> </a>
+                          <div class="text-container">
+                            <p class="destination_name">해인사 성보박물관</p>
+                            <p class="destination_address">경상남도 합천군</p>
+                            <p class="destination_coment">이곳에 팔만대장경판이!? 바로 보고싶다면</p>
+                            <button class="destination_button">보러 가기</button>
+                          </div>
+                    </div>
+                                 
+                  </div>
+                </div>
+                
+                <div class="slide hidden" id="slide2">
+                  <h1>20대</h1>
+                  <div class="slide-content">
+
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/mokoko1.png' %}">
+                        <p class="image-description">해인사박물관</p>
+                    </div>
+
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/mokoko2.png' %}">
+                        <p class="image-description">해인사박물관</p>
+                    </div>
+
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/mokoko1.png' %}">
+                        <p class="image-description">해인사박물관</p>
+                    </div>
+
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/mokoko2.png' %}">
+                        <p class="image-description">해인사박물관</p>
+                    </div>
+
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/mokoko1.png' %}">
+                        <p class="image-description">해인사박물관</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="slide hidden" id="slide3">
+                  <h1>30대</h1>
+                  <div class="slide-content">
+                    <img src="image2.jpg" alt="평화광장">
+                    <p>내용 3</p>
+                  </div>
+                </div>
+                <div class="slide hidden" id="slide4">
+                  <h1>40대</h1>
+                  <div class="slide-content">
+                    <img src="image2.jpg" alt="이미지 4">
+                    <p>내용 4</p>
+                  </div>
+                </div>
+
+                <div class="slide hidden" id="slide5">
+                  <h1>50대</h1>
+                  <div class="slide-content">
+
+                    <div class="image-text">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO_z2eKZ1_akQA4kQ77lVpIG3mA2v65fq6-A&usqp=CAU">
+                          <div class="text-container">
+                            <p class="name">도담삼봉</p>
+                            <p class="address">주소 정보</p>
+                            <button class="button">상세 정보</button>
+                          </div>
+                    </div>
+
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/qweqwe.jpg' %}">
+                        <p class="image-description">강구항</p>
+                    </div>
+
+                    <div class="image-text">
+                      <img src="https://www.museum.go.kr/ux/content/images/intro/temp/img_mobile_intro_bg02.jpg">
+                        <p class="image-description">국립중앙박물관</p>
+                    </div>
+
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/mokoko2.png' %}">
+                        <p class="image-description">해인사박물관</p>
+                    </div>
+
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/mokoko1.png' %}" >
+                        <p class="image-description">해인사박물관</p>
+                    </div>
+                  </div>
+                </div>
+
+              
+              </div>
+            <br>
+              <!--버튼-->
+              <button class="carousel-button prev" onclick="goToSlide('prev')">이전</button>
+              <button class="carousel-button next" onclick="goToSlide('next')">다음</button>
+              <!-- 10대 20대 버튼 이벤트-->
+              <script>
+                const slides = document.querySelectorAll('.slide');
+                let currentSlideIndex = 0;
+
+                function goToSlide(direction) {
+                  slides[currentSlideIndex].classList.add('hidden');
+
+                  if (direction === 'prev') {
+                    currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+                  } else if (direction === 'next') {
+                    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+                  }
+
+                  slides[currentSlideIndex].classList.remove('hidden');
+                }
+              </script>
+      </div>
+<!--------------------가운대---------------------->
+          <div class="col-md-4">
+            <div class="custom-content">
+              <!-- 가운데 영역에 들어갈 맞춤화된 컨텐츠 내용을 여기에 추가하세요 -->
+              <div class="carousel" style="width: 400px; height:920px">
+                <div class="slide" id="slide1">
+                  <h1>'{{ mem_id }}'님 맞춤 여행지</h1>
+                  <div class="slide-content">
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/ansghk.jpg' %}"></a>
+                          <div class="text-container">
+                            <p class="destination_name">{{ top1.travel_nm }}</p>
+                            <p class="destination_address">{{ top1.sido }} {{ top1.sigungu }}</p>
+                            <p class="destination_coment"></p>
+                            <button class="destination_button">보러 가기</button>
+                          </div>
+                    </div>
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/ansghk.jpg' %}"></a>
+                          <div class="text-container">
+                            <p class="destination_name">{{ top2.travel_nm }}</p>
+                            <p class="destination_address">{{ top2.sido }} {{ top2.sigungu }}</p>
+                            <p class="destination_coment"></p>
+                            <button class="destination_button">보러 가기</button>
+                          </div>
+                    </div>
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/ansghk.jpg' %}"></a>
+                          <div class="text-container">
+                            <p class="destination_name">{{ top3.travel_nm }}</p>
+                            <p class="destination_address">{{ top3.sido }} {{ top3.sigungu }}</p>
+                            <p class="destination_coment"></p>
+                            <button class="destination_button">보러 가기</button>
+                          </div>
+                    </div>
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/ansghk.jpg' %}"></a>
+                          <div class="text-container">
+                            <p class="destination_name">{{ top4.travel_nm }}</p>
+                            <p class="destination_address">{{ top4.sido }} {{ top4.sigungu }}</p>
+                            <p class="destination_coment"></p>
+                            <button class="destination_button">보러 가기</button>
+                          </div>
+                    </div>
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/ansghk.jpg' %}"></a>
+                          <div class="text-container">
+                            <p class="destination_name">{{ top5.travel_nm }}</p>
+                            <p class="destination_address">{{ top5.sido }} {{ top5.sigungu }}</p>
+                            <p class="destination_coment"></p>
+                            <button class="destination_button">보러 가기</button>
+                          </div>
+
+                          <script type="text/javascript">
+                            var destinationNameElements = document.getElementsByClassName("destination_name");
+                          
+                            for (var i = 0; i < destinationNameElements.length; i++) {
+                              var destinationNameElement = destinationNameElements[i];
+                              var travelName = destinationNameElement.innerText;
+                          
+                              var formattedName = nameSplit(travelName);  // nameSplit 함수를 호출하여 값 처리
+                          
+                              destinationNameElement.innerText = formattedName;  // 수정된 문자열로 업데이트
+                            }
+                          
+                            function nameSplit(inputString) {
+                              var splitArray = inputString.split(/[[(]+/);
+                              var formattedName = splitArray[0].trim();
+                              return formattedName;
+                            }
+                          </script>
+                          
+                    </div>
+                  </div>              
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="custom-content">     
+              <!-- 오른쪽 영역에 들어갈 맞춤화된 컨텐츠 내용을 여기에 추가하세요 -->
+              <div class="carousel" style="width: 400px; height:920px">
+                <div class="slide" id="slide1">
+                  <h1>부모님 추천 여행</h1>
+                  <div class="slide-content">
+                    <a href="">
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/ansghk.jpg' %}"> </a>
+                        <p class="image-description">해인사박물관</p>
+                    </div>
+                   
+
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/mokoko1.png' %}">
+                        <p class="image-description">해인사박물관</p>
+                    </div>
+
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/mokoko3.png' %}" >
+                        <p class="image-description">해인사박물관</p>
+                    </div>
+
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/mokoko1.png' %}">
+                        <p class="image-description">해인사박물관</p>
+                    </div>
+
+                    <div class="image-text">
+                      <img src="{% static 'travelapp/img/mokoko1.png' %}">
+                        <p class="image-description">해인사박물관</p>
+                    </div>
+                                 
+                  </div>
+                </div>
+              
+            </div>
+          </div>
+        </div>  
+      </div>
+    
+
+      <br>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+      <div class="row g-5">
+        <div class="col-md-12">
+          <h3 class="pb-4 mb-4 fst-italic border-bottom">
+            이달의 축제
+          </h3>
+          <!--스위퍼 기능-->
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img class="card-img-top" src="{% static 'travelapp/img/travel_logo/ab.jpg' %}">
+                    <div class="card-body">
+                      <h5 class="card-title">함평 꽃축제</h5>
+                      <p class="card-text">함평에서만 맛볼수있는 축제의 현장 함평으로 오세요~</p>
+                      <a href="/travel/mi" class="btn btn-primary">바로가기</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 다른 카드 요소들을 복제하여 추가합니다. -->
+              <div class="swiper-slide">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img class="card-img-top" src="{% static 'travelapp/img/travel_logo/boat.jpg' %}">
+                    <div class="card-body">
+                      <h5 class="card-title">화성 뱃놀이 축제</h5>
+                      <p class="card-text">
+                      배를 타고 낭만적인 모험 을 즐길 수 있는 화성으로 오세요~</p>
+                      <a href="/travel/ship" class="btn btn-primary">바로가기</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 나머지 카드 요소들을 복제하여 추가합니다. -->
+              <div class="swiper-slide">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img class="card-img-top" src="{% static 'travelapp/img/travel_logo/seoul.png' %}">
+                    <div class="card-body">
+                      <h5 class="card-title">서울 문화축제 </h5>
+                      <p class="card-text">마주하는 세계, 하나되는 우리 ! 서울 도심 속 세계 여행으로 모두를 초대한다.</p>
+                      <a href="/travel/seoulcul" class="btn btn-primary">바로가기</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img class="card-img-top" src="{% static 'travelapp/img/travel_logo/daegu.png' %}">
+                    <div class="card-body">
+                      <h5 class="card-title">대구 떡볶이 축제</h5>
+                      <p class="card-text"> 우주 최강의 프렌차이즈 떡볶이 체험하기</p>
+                      <a href="/travel/ttuk" class="btn btn-primary">바로가기</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img class="card-img-top" src="{% static 'travelapp/img/mokoko2.png' %}">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title 2</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ... -->
+
+                <div class="swiper-slide">
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img class="card-img-top" src="{% static 'travelapp/img/mokoko2.png' %}">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title 2</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+      
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="{% static 'travelapp/js/main_swiper.js' %}"></script>
+
+
+      
+    </div>
+  </body>
+</html>

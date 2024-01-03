@@ -1,0 +1,30 @@
+/*버튼 css*/
+.carousel-button.prev,
+.carousel-button.next {
+  flex: 1 1 auto;
+  margin: 50px;
+  margin-top: 0px;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+.carousel-button.prev:hover,
+.carousel-button.next:hover {
+  background-position: right center;
+}
+
+.carousel-button.prev {
+    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+  
+}
+
+.carousel-button.next {
+    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+
+}
